@@ -311,20 +311,21 @@ void Ferma::VanzareAnimaleFerma()
 }
 void Ferma::CumparaAnimale()
 {
-    int nrCategorii[8] {0};
+    system ("CLS");
+    int nrCategorii[8];
     for (int q = 0; q < Animalute.size(); q++)
     {
         nrCategorii[Animalute[q].GetSpecie()] += 1;
     }
 
-    cout << NumeSpecieAnimal(0) << " -> " << "80 euro" << endl;
-    cout << NumeSpecieAnimal(1) << " -> " << "50 euro" << endl;
-    cout << NumeSpecieAnimal(2) << " -> " << "150 euro" << endl;
-    cout << NumeSpecieAnimal(3) << " -> " << "250 euro" << endl;
-    cout << NumeSpecieAnimal(4) << " -> " << "20 euro" << endl;
-    cout << NumeSpecieAnimal(5) << " -> " << "20 euro" << endl;
-    cout << NumeSpecieAnimal(6) << " -> " << "25 euro" << endl;
-    cout << NumeSpecieAnimal(7) << " -> " << "25 euro" << endl;
+    cout << NumeSpecieAnimal(0) << " -> " << "80 euro / bucata" << endl;
+    cout << NumeSpecieAnimal(1) << " -> " << "50 euro / bucata" << endl;
+    cout << NumeSpecieAnimal(2) << " -> " << "150 euro / bucata" << endl;
+    cout << NumeSpecieAnimal(3) << " -> " << "250 euro / bucata" << endl;
+    cout << NumeSpecieAnimal(4) << " -> " << "20 euro / bucata" << endl;
+    cout << NumeSpecieAnimal(5) << " -> " << "20 euro / bucata" << endl;
+    cout << NumeSpecieAnimal(6) << " -> " << "25 euro / bucata" << endl;
+    cout << NumeSpecieAnimal(7) << " -> " << "25 euro / bucata" << endl;
     cout << "8. Sold disponibil" << endl;
     cout << "9. Revenire la meniul principal" << endl;
     short optiune;
@@ -333,13 +334,14 @@ void Ferma::CumparaAnimale()
     switch (optiune)
     {
     case 0 :
+        system ("CLS");
         cout << "Ati selectat optiunea - Porci (80 euro / bucata)"  << "\nCati porci doriti sa cumparati?" <<endl;
         cin >> numar;
         if (numar > 0)
         {
 
             sold -= pretCumparare[0] * numar;
-            cout << "Ati cumarat " << numar << " porci" << endl;
+            cout << "Ati cumparat " << numar << " porci" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
         }
         else
@@ -348,7 +350,141 @@ void Ferma::CumparaAnimale()
             system("pause");
             CumparaAnimale();
         }
-    }
+        break;
+    case 1 :
+        system ("CLS");
+        cout << "Ati selectat optiunea - Oi (50 euro / bucata)"  << "\nCate oi doriti sa cumparati?" <<endl;
+        cin >> numar;
+        if (numar > 0)
+        {
+
+            sold -= pretCumparare[1] * numar;
+            cout << "Ati cumparat " << numar << " oi" << endl;
+            cout << "Sold disponibil: " << sold << " euro" << endl;
+        }
+        else
+        {
+            cout << "Optiune invalida!!!" << endl;
+            system("pause");
+            CumparaAnimale();
+        }
+        break;
+    case 2 :
+        system ("CLS");
+        cout << "Ati selectat optiunea - Bovine (150 euro / bucata)"  << "\nCate bovine doriti sa cumparati?" <<endl;
+        cin >> numar;
+        if (numar > 0)
+        {
+
+            sold -= pretCumparare[2] * numar;
+            cout << "Ati cumparat " << numar << " bovine" << endl;
+            cout << "Sold disponibil: " << sold << " euro" << endl;
+        }
+        else
+        {
+            cout << "Optiune invalida!!!" << endl;
+            system("pause");
+            CumparaAnimale();
+        }
+        break;
+    case 3 :
+        system ("CLS");
+        cout << "Ati selectat optiunea - Cai (250 euro / bucata)"  << "\nCati cai doriti sa cumparati?" <<endl;
+        cin >> numar;
+        if (numar > 0)
+        {
+
+            sold -= pretCumparare[3] * numar;
+            cout << "Ati cumparat " << numar << " cai" << endl;
+            cout << "Sold disponibil: " << sold << " euro" << endl;
+        }
+        else
+        {
+            cout << "Optiune invalida!!!" << endl;
+            system("pause");
+            CumparaAnimale();
+        }
+        break;
+    case 4 :
+        system ("CLS");
+        cout << "Ati selectat optiunea - Gaini (20 euro / bucata)"  << "\nCate gaini doriti sa cumparati?" <<endl;
+        cin >> numar;
+        if (numar > 0)
+        {
+
+            sold -= pretCumparare[4] * numar;
+            cout << "Ati cumparat " << numar << " gaini" << endl;
+            cout << "Sold disponibil: " << sold << " euro" << endl;
+        }
+        else
+        {
+            cout << "Optiune invalida!!!" << endl;
+            system("pause");
+            CumparaAnimale();
+        }
+        break;
+    case 5 :
+        system ("CLS");
+        cout << "Ati selectat optiunea - Gaste (20 euro / bucata)"  << "\nCate gaste doriti sa cumparati?" <<endl;
+        cin >> numar;
+        if (numar > 0)
+        {
+
+            sold -= pretCumparare[5] * numar;
+            cout << "Ati cumparat " << numar << " porci" << endl;
+            cout << "Sold disponibil: " << sold << " euro" << endl;
+        }
+        else
+        {
+            cout << "Optiune invalida!!!" << endl;
+            system("pause");
+            CumparaAnimale();
+        }
+        break;
+    case 6 :
+        system ("CLS");
+        cout << "Ati selectat optiunea - Rate (25 euro / bucata)"  << "\nCate rate doriti sa cumparati?" <<endl;
+        cin >> numar;
+        if (numar > 0)
+        {
+
+            sold -= pretCumparare[6] * numar;
+            cout << "Ati cumparat " << numar << " porci" << endl;
+            cout << "Sold disponibil: " << sold << " euro" << endl;
+        }
+        else
+        {
+            cout << "Optiune invalida!!!" << endl;
+            system("pause");
+            CumparaAnimale();
+        }
+        break;
+    case 7 :
+        system ("CLS");
+        cout << "Ati selectat optiunea - Curci (25 euro / bucata)"  << "\nCate curci doriti sa cumparati?" <<endl;
+        cin >> numar;
+        if (numar > 0)
+        {
+
+            sold -= pretCumparare[7] * numar;
+            cout << "Ati cumparat " << numar << " porci" << endl;
+            cout << "Sold disponibil: " << sold << " euro" << endl;
+        }
+        else
+        {
+            cout << "Optiune invalida!!!" << endl;
+            system("pause");
+            CumparaAnimale();
+        }
+        break;
+    case 8 :
+        system("CLS");
+        cout << "Soldul disponibil este " << sold << " euro" <<endl;
+        break;
+    case 9 :
+    break;
+    default :
+    ;}
     system("pause");
 }
 void Ferma::VizualizeazaBugetFerma()
