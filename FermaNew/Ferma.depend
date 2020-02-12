@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1580506106 source:d:\it\proiecte\ferma\src\animal.cpp
+	"Animal.h"
+
+1580521180 d:\it\proiecte\ferma\include\animal.h
+	<string>
+
+1580511190 source:d:\it\proiecte\ferma\src\pasare.cpp
+	"Pasare.h"
+
+1580511190 d:\it\proiecte\ferma\include\pasare.h
+	<Animal.h>
+
+1580511129 source:d:\it\proiecte\ferma\src\patruped.cpp
+	"Patruped.h"
+
+1580511102 d:\it\proiecte\ferma\include\patruped.h
+	"Animal.h"
+
+1580523511 source:d:\it\proiecte\ferma\main.cpp
+	<iostream>
+	"Animal.h"
+	"Patruped.h"
+	"Pasare.h"
+	"Ferma.h"
+
+1580523511 source:d:\it\proiecte\ferma\src\ferma.cpp
+	"Ferma.h"
+	<iostream>
+
+1580521553 d:\it\proiecte\ferma\include\ferma.h
+	<vector>
+	"Animal.h"
+	<string>
+
+1581456596 source:c:\users\vlad\desktop\fermanew\main.cpp
+	<iostream>
+	"Animal.h"
+	"Patruped.h"
+	"Pasare.h"
+	"Ferma.h"
+
+1581456326 c:\users\vlad\desktop\fermanew\include\animal.h
+	<string>
+
+1580511102 c:\users\vlad\desktop\fermanew\include\patruped.h
+	"Animal.h"
+
+1580511190 c:\users\vlad\desktop\fermanew\include\pasare.h
+	<Animal.h>
+
+1581502306 c:\users\vlad\desktop\fermanew\include\ferma.h
+	<vector>
+	"Animal.h"
+	<string>
+
+1580506106 source:c:\users\vlad\desktop\fermanew\src\animal.cpp
+	"Animal.h"
+
+1581503623 source:c:\users\vlad\desktop\fermanew\src\ferma.cpp
+	"Ferma.h"
+	<iostream>
+
+1580511190 source:c:\users\vlad\desktop\fermanew\src\pasare.cpp
+	"Pasare.h"
+
+1580511129 source:c:\users\vlad\desktop\fermanew\src\patruped.cpp
+	"Patruped.h"
+
