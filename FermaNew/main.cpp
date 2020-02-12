@@ -335,6 +335,7 @@ void ExchangeOffice()
     cout << "2. Lira Sterlina" << endl;
     cout << "3. Dolarul American" << endl;
     cout << "4. Francul Elvetian" << endl;
+    cout << "5. Revenire la meniul principal" << endl;
     short numar;
     int optiune;
     cin >> optiune;
@@ -368,6 +369,12 @@ void ExchangeOffice()
         cout << endl;
         cout << numar << " franci sunt " <<  numar * 0.94  << " euro." << endl;
         break;
+    case 5 :
+        Meniu();
+        break;
+    default :
+        break;
+        ;
     }
 }
 
