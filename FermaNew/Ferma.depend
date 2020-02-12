@@ -33,7 +33,7 @@
 	"Animal.h"
 	<string>
 
-1581542240 source:c:\users\vlad\desktop\fermanew\main.cpp
+1581544125 source:c:\users\vlad\desktop\fermanew\main.cpp
 	<iostream>
 	"Animal.h"
 	"Patruped.h"
@@ -57,7 +57,7 @@
 1580506106 source:c:\users\vlad\desktop\fermanew\src\animal.cpp
 	"Animal.h"
 
-1581539908 source:c:\users\vlad\desktop\fermanew\src\ferma.cpp
+1581544630 source:c:\users\vlad\desktop\fermanew\src\ferma.cpp
 	"Ferma.h"
 	<iostream>
 
