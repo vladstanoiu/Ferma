@@ -3,7 +3,7 @@
 using namespace std;
 Ferma::Ferma()
 {
-    Pret = std::vector<int>(8);
+    Pret = vector<int>(8);
     Pret[0] = 100;
     Pret[1] = 70;
     Pret[2] = 200;
@@ -14,6 +14,18 @@ Ferma::Ferma()
     Pret[7] = 30;
 
     buget = 0;
+    sold = 500;
+
+    pretCumparare = vector<int>(8);
+    pretCumparare[0] = 80;
+    pretCumparare[1] = 50;
+    pretCumparare[2] = 150;
+    pretCumparare[3] = 250;
+    pretCumparare[4] = 20;
+    pretCumparare[5] = 20;
+    pretCumparare[6] = 25;
+    pretCumparare[7] = 25;
+
 }
 
 string Ferma::NumeSpecieAnimal(int animal)
@@ -296,6 +308,54 @@ void Ferma::VanzareAnimaleFerma()
             break;
         }
     }
+}
+void Ferma::CumparaAnimale()
+{
+    int nrCategorii[8] {0};
+    for (int q = 0; q < Animalute.size(); q++)
+    {
+        nrCategorii[Animalute[q].GetSpecie()] += 1;
+    }
+
+    cout << NumeSpecieAnimal(0) << " -> " << "80 euro" << endl;
+    cout << NumeSpecieAnimal(1) << " -> " << "50 euro" << endl;
+    cout << NumeSpecieAnimal(2) << " -> " << "150 euro" << endl;
+    cout << NumeSpecieAnimal(3) << " -> " << "250 euro" << endl;
+    cout << NumeSpecieAnimal(4) << " -> " << "20 euro" << endl;
+    cout << NumeSpecieAnimal(5) << " -> " << "20 euro" << endl;
+    cout << NumeSpecieAnimal(6) << " -> " << "25 euro" << endl;
+    cout << NumeSpecieAnimal(7) << " -> " << "25 euro" << endl;
+    cout << "8. Sold disponibil" << endl;
+    cout << "9. Revenire la meniul principal" << endl;
+    short optiune;
+    short numar;
+    cin >> optiune;
+    switch (optiune)
+    {
+    case 0 :
+        cout << "Ati selectat optiunea - Porci (80 euro / bucata)"  << "\nCati porci doriti sa cumparati?" <<endl;
+        cin >> numar;
+        if (numar > 0)
+        {
+
+            sold -= pretCumparare[0] * numar;
+            cout << "Ati cumarat " << numar << " porci" << endl;
+            cout << "Sold disponibil: " << sold << " euro" << endl;
+        }
+        else
+        {
+            cout << "Optiune invalida!!!" << endl;
+            system("pause");
+            CumparaAnimale();
+        }
+    }
+    system("pause");
+}
+void Ferma::VizualizeazaBugetFerma()
+{
+    sold +=buget;
+    cout << "Bugetul fermei este "<< sold <<" euro." << endl;
+    system("pause");
 }
 void Ferma::SituatieFerma()
 {
