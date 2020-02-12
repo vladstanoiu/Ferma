@@ -485,12 +485,13 @@ void Ferma::CumparaAnimale()
     break;
     default :
     ;}
-    system("pause");
+
 }
 void Ferma::VizualizeazaBugetFerma()
 {
+    system("CLS");
     sold +=buget;
-    cout << "Bugetul fermei este "<< sold <<" euro." << endl;
+    cout << "Bugetul fermei este "<< GetBuget() <<" euro." << endl;
     system("pause");
 }
 void Ferma::SituatieFerma()
