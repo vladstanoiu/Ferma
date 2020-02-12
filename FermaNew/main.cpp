@@ -24,12 +24,14 @@ void AfiseazaPopulatieFerma();
 void AdaugaHranaAnimale();
 void CereCantitateDeAdaugat(TipMancare);
 void AfiseazaSituatieFerma();
+void ExchangeOffice();
 
 
 
 void Meniu()
 {
     system("CLS");
+    cout << "Bun venit la ferma PIG DESTROYER" << endl << endl;
     cout << "1. Adauga animale noi" << endl;
     cout << "2. Redu numarul de animale" << endl;
     cout << "3. Afiseaza populatie ferma" << endl;
@@ -38,9 +40,10 @@ void Meniu()
     cout << "6. Vanzare animale" << endl;
     cout << "7. Cumpara animale" << endl;
     cout << "8. Vizualizeaza buget ferma" << endl;
-    cout << "9. Iesire" << endl;
+    cout << "9. Exchange office" << endl;
+    cout << "10. Iesire" << endl;
     int numar;
-   cin >> numar;
+    cin >> numar;
     switch (numar)
     {
     case 1:
@@ -67,7 +70,9 @@ void Meniu()
     case 8:
         ferma.VizualizeazaBugetFerma();
         break;
-    case 9:
+    case 9 :
+        ExchangeOffice();
+    case 10:
         alearga = 0;
         break;
     default:
@@ -297,17 +302,17 @@ void CereCantitateDeAdaugat(TipMancare mancare)
         cout << "Nu aveti buget disponibil in ferma pentru mancare!" << endl;
         system("pause");
     }
+    else
+    {
+        if (mancare == fan )
+        {
+            ferma.SetFan(i);
+        }
         else
         {
-            if (mancare == fan )
-            {
-                ferma.SetFan(i);
-            }
-            else
-            {
-                ferma.SetPorumb(i);
-            }
+            ferma.SetPorumb(i);
         }
+    }
 //        else
 //        {
 //            CereCantitateDeAdaugat(mancare);
@@ -321,6 +326,50 @@ void AfiseazaSituatieFerma()
     system("pause");
 }
 
+void ExchangeOffice()
+{
+    system("CLS");
+    cout << "Tranzactiile din ferma necesita numerar in euro !" << endl;
+    cout << "Selectati moneda pe care doriti sa o schimbati in euro: " << endl;
+    cout << "1. Ron" << endl;
+    cout << "2. Lira Sterlina" << endl;
+    cout << "3. Dolarul American" << endl;
+    cout << "4. Francul Elvetian" << endl;
+    short numar;
+    int optiune;
+    cin >> optiune;
+    switch (optiune)
+    {
+    case 1:
+        cout << "Ati ales moneda - Ron" << endl;
+        cout << "Introduceti valoarea pe care doriti sa o schimbati in euro: " << endl;
+        cin >> numar;
+        cout << endl;
+        cout << numar << " ron sunt " <<  numar * 0.21  << " euro." << endl;
+        break;
+    case 2:
+        cout << "Ati ales moneda - Lira Sterlina (GBP) " << endl;
+        cout << "Introduceti valoarea pe care doriti sa o schimbati in euro: " << endl;
+        cin >> numar;
+        cout << endl;
+        cout << numar << " lire sunt " <<  numar * 1.19  << " euro." << endl;
+        break;
+    case 3:
+        cout << "Ati ales moneda - Dolarul American (USD)" << endl;
+        cout << "Introduceti valoarea pe care doriti sa o schimbati in euro: " << endl;
+        cin >> numar;
+        cout << endl;
+        cout << numar << " dolari sunt " <<  numar * 0.91  << " euro." << endl;
+        break;
+    case 4 :
+        cout << "Ati ales moneda - Francul Elvetian (USD)" << endl;
+        cout << "Introduceti valoarea pe care doriti sa o schimbati in euro: " << endl;
+        cin >> numar;
+        cout << endl;
+        cout << numar << " franci sunt " <<  numar * 0.94  << " euro." << endl;
+        break;
+    }
+}
 
 int main()
 {
