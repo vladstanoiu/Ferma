@@ -36,9 +36,11 @@ void Meniu()
     cout << "4. Adauga hrana animale" <<endl;
     cout << "5. Afiseaza situatie ferma" << endl;
     cout << "6. Vanzare animale" << endl;
-    cout << "7. Iesire" << endl;
+    cout << "7. Cumpara animale" << endl;
+    cout << "8. Vizualizeaza buget ferma" << endl;
+    cout << "9. Iesire" << endl;
     int numar;
-    cin >> numar;
+   cin >> numar;
     switch (numar)
     {
     case 1:
@@ -60,6 +62,12 @@ void Meniu()
         ferma.VanzareAnimaleFerma();
         break;
     case 7:
+        ferma.CumparaAnimale();
+        break;
+    case 8:
+        ferma.VizualizeazaBugetFerma();
+        break;
+    case 9:
         alearga = 0;
         break;
     default:
@@ -284,21 +292,27 @@ void CereCantitateDeAdaugat(TipMancare mancare)
     cout << "Precizati cantitatea: "<< endl;
     int i;
     cin >> i;
-    if (i >0)
+    if (i > ferma.GetBuget() && (i > 0))
     {
-        if (mancare == fan )
-        {
-            ferma.SetFan(i);
-        }
+        cout << "Nu aveti buget disponibil in ferma pentru mancare!" << endl;
+        system("pause");
+    }
         else
         {
-            ferma.SetPorumb(i);
+            if (mancare == fan )
+            {
+                ferma.SetFan(i);
+            }
+            else
+            {
+                ferma.SetPorumb(i);
+            }
         }
-    }
-    else
-    {
-        CereCantitateDeAdaugat(mancare);
-    }
+//        else
+//        {
+//            CereCantitateDeAdaugat(mancare);
+//        }
+
 }
 void AfiseazaSituatieFerma()
 {
