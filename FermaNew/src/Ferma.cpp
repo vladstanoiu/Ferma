@@ -63,6 +63,24 @@ string Ferma::NumeSpecieAnimal(int animal)
     }
     return specie;
 }
+void Ferma::CreeazaAnimaleDeCumparat(TipAnimal tip, int numarAnimale)
+{
+    for (int q = 0; q < numarAnimale; q++)
+    {
+        if (tip == porc || tip == bovina || tip == oaie || tip == cal)
+        {
+            Patruped animalNou = Patruped(tip);
+            AdaugaAnimal(animalNou);
+        }
+        else
+        {
+            Pasare animalNou = Pasare(tip);
+            AdaugaAnimal(animalNou);
+        }
+    }
+
+}
+
 void Ferma::AdaugaAnimal(Animal animal)
 {
     Animalute.push_back(animal);
@@ -301,6 +319,7 @@ void Ferma::VanzareAnimaleFerma()
 
             cout << "Sumarul total este: " << buget <<endl;
             system("pause");
+            VanzareAnimaleFerma();
             break;
         case 10 :
             break;
@@ -339,10 +358,13 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
-
+            CreeazaAnimaleDeCumparat(porc, numar);
             sold -= pretCumparare[0] * numar;
             cout << "Ati cumparat " << numar << " porci" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
+            cout << endl;
+            system("pause");
+            CumparaAnimale();
         }
         else
         {
@@ -357,10 +379,13 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
-
+            CreeazaAnimaleDeCumparat(oaie, numar);
             sold -= pretCumparare[1] * numar;
             cout << "Ati cumparat " << numar << " oi" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
+            cout << endl;
+            system("pause");
+            CumparaAnimale();
         }
         else
         {
@@ -375,10 +400,13 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
-
+            CreeazaAnimaleDeCumparat(bovina, numar);
             sold -= pretCumparare[2] * numar;
             cout << "Ati cumparat " << numar << " bovine" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
+            cout << endl;
+            system("pause");
+            CumparaAnimale();
         }
         else
         {
@@ -393,10 +421,13 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
-
+            CreeazaAnimaleDeCumparat(cal, numar);
             sold -= pretCumparare[3] * numar;
             cout << "Ati cumparat " << numar << " cai" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
+            cout << endl;
+            system("pause");
+            CumparaAnimale();
         }
         else
         {
@@ -411,10 +442,13 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
-
+            CreeazaAnimaleDeCumparat(gaina, numar);
             sold -= pretCumparare[4] * numar;
             cout << "Ati cumparat " << numar << " gaini" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
+            cout << endl;
+            system("pause");
+            CumparaAnimale();
         }
         else
         {
@@ -429,10 +463,13 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
-
+            CreeazaAnimaleDeCumparat(gasca, numar);
             sold -= pretCumparare[5] * numar;
             cout << "Ati cumparat " << numar << " porci" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
+            cout << endl;
+            system("pause");
+            CumparaAnimale();
         }
         else
         {
@@ -447,10 +484,13 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
-
+            CreeazaAnimaleDeCumparat(rata, numar);
             sold -= pretCumparare[6] * numar;
             cout << "Ati cumparat " << numar << " porci" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
+            cout << endl;
+            system("pause");
+            CumparaAnimale();
         }
         else
         {
@@ -465,10 +505,13 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
-
+            CreeazaAnimaleDeCumparat(curca, numar);
             sold -= pretCumparare[7] * numar;
             cout << "Ati cumparat " << numar << " porci" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
+            cout << endl;
+            system("pause");
+            CumparaAnimale();
         }
         else
         {
@@ -478,13 +521,16 @@ void Ferma::CumparaAnimale()
         }
         break;
     case 8 :
-        system("CLS");
+
         cout << "Soldul disponibil este " << sold << " euro" <<endl;
+        system("pause");
+        CumparaAnimale();
         break;
     case 9 :
-    break;
+        break;
     default :
-    ;}
+        ;
+    }
 
 }
 void Ferma::VizualizeazaBugetFerma()
