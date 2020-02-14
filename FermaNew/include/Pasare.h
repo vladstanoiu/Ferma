@@ -9,6 +9,7 @@ class Pasare : public Animal
     public:
         Pasare();
         Pasare(TipAnimal , TipMancare , int);
+        Pasare(TipAnimal);
         virtual ~Pasare();
 
     protected:
