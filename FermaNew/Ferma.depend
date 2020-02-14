@@ -33,37 +33,39 @@
 	"Animal.h"
 	<string>
 
-1581544125 source:c:\users\vlad\desktop\fermanew\main.cpp
+1581709491 source:c:\users\vlad\desktop\fermanew\main.cpp
 	<iostream>
 	"Animal.h"
 	"Patruped.h"
 	"Pasare.h"
 	"Ferma.h"
 
-1581456326 c:\users\vlad\desktop\fermanew\include\animal.h
+1581708174 c:\users\vlad\desktop\fermanew\include\animal.h
 	<string>
 
-1580511102 c:\users\vlad\desktop\fermanew\include\patruped.h
+1581708174 c:\users\vlad\desktop\fermanew\include\patruped.h
 	"Animal.h"
 
-1580511190 c:\users\vlad\desktop\fermanew\include\pasare.h
+1581708173 c:\users\vlad\desktop\fermanew\include\pasare.h
 	<Animal.h>
 
-1581538084 c:\users\vlad\desktop\fermanew\include\ferma.h
+1581708616 c:\users\vlad\desktop\fermanew\include\ferma.h
 	<vector>
 	"Animal.h"
 	<string>
+	"Patruped.h"
+	"Pasare.h"
 
-1580506106 source:c:\users\vlad\desktop\fermanew\src\animal.cpp
+1581708174 source:c:\users\vlad\desktop\fermanew\src\animal.cpp
 	"Animal.h"
 
-1581544630 source:c:\users\vlad\desktop\fermanew\src\ferma.cpp
+1581710231 source:c:\users\vlad\desktop\fermanew\src\ferma.cpp
 	"Ferma.h"
 	<iostream>
 
-1580511190 source:c:\users\vlad\desktop\fermanew\src\pasare.cpp
+1581708174 source:c:\users\vlad\desktop\fermanew\src\pasare.cpp
 	"Pasare.h"
 
-1580511129 source:c:\users\vlad\desktop\fermanew\src\patruped.cpp
+1581708187 source:c:\users\vlad\desktop\fermanew\src\patruped.cpp
 	"Patruped.h"
 
