@@ -8,6 +8,7 @@ class Patruped : public Animal
     public:
         Patruped();
         Patruped(TipAnimal , TipMancare , int);
+        Patruped(TipAnimal);
         virtual ~Patruped();
 
     protected:
