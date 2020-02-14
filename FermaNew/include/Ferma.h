@@ -3,6 +3,8 @@
 #include <vector>
 #include "Animal.h"
 #include <string>
+#include "Patruped.h"
+#include "Pasare.h"
 
 class Ferma
 {
@@ -24,6 +26,7 @@ class Ferma
         void VanzareAnimaleFerma();
         void VizualizeazaBugetFerma();
         void CumparaAnimale();
+        void CreeazaAnimaleDeCumparat(TipAnimal , int);
 
 
 
