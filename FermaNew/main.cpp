@@ -329,8 +329,9 @@ void AfiseazaSituatieFerma()
 void ExchangeOffice()
 {
     system("CLS");
-    cout << "Tranzactiile din ferma necesita numerar in euro !" << endl;
+    cout << ">>>>Tranzactiile din ferma necesita numerar doar in moneda euro <<<<" << endl<<endl;
     cout << "Selectati moneda pe care doriti sa o schimbati in euro: " << endl;
+    cout <<endl;
     cout << "1. Ron" << endl;
     cout << "2. Lira Sterlina" << endl;
     cout << "3. Dolarul American" << endl;
