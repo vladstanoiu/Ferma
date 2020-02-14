@@ -8,6 +8,10 @@ Animal::Animal(TipAnimal animalut , TipMancare mancare, int cantitate) : specie(
 {
 
 }
+Animal::Animal(TipAnimal animalut) : specie(animalut)
+{
+
+}
 Animal::~Animal()
 {
     //dtor
