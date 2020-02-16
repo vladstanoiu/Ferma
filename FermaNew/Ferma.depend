@@ -33,33 +33,31 @@
 	"Animal.h"
 	<string>
 
-1581709491 source:c:\users\vlad\desktop\fermanew\main.cpp
+1581878403 source:c:\users\vlad\desktop\fermanew\main.cpp
 	<iostream>
-	"Animal.h"
-	"Patruped.h"
-	"Pasare.h"
-	"Ferma.h"
+	"Meniu.h"
 
-1581708174 c:\users\vlad\desktop\fermanew\include\animal.h
+1581795427 c:\users\vlad\desktop\fermanew\include\animal.h
 	<string>
 
 1581708174 c:\users\vlad\desktop\fermanew\include\patruped.h
 	"Animal.h"
 
-1581708173 c:\users\vlad\desktop\fermanew\include\pasare.h
+1581877603 c:\users\vlad\desktop\fermanew\include\pasare.h
 	<Animal.h>
 
-1581708616 c:\users\vlad\desktop\fermanew\include\ferma.h
+1581794447 c:\users\vlad\desktop\fermanew\include\ferma.h
 	<vector>
 	"Animal.h"
 	<string>
 	"Patruped.h"
 	"Pasare.h"
+	"Utilaj.h"
 
 1581708174 source:c:\users\vlad\desktop\fermanew\src\animal.cpp
 	"Animal.h"
 
-1581710231 source:c:\users\vlad\desktop\fermanew\src\ferma.cpp
+1581879125 source:c:\users\vlad\desktop\fermanew\src\ferma.cpp
 	"Ferma.h"
 	<iostream>
 
@@ -68,4 +66,37 @@
 
 1581708187 source:c:\users\vlad\desktop\fermanew\src\patruped.cpp
 	"Patruped.h"
+
+1581715097 source:c:\users\vlad\desktop\fermanew\src\utilaje.cpp
+	"Utilaje.h"
+
+1581717787 c:\users\vlad\desktop\fermanew\include\utilaje.h
+	<iostream>
+	<Ferma.h>
+	"Combina.h"
+	"Tractor.h"
+
+1581715925 source:c:\users\vlad\desktop\fermanew\src\combina.cpp
+	"Combina.h"
+
+1581715925 c:\users\vlad\desktop\fermanew\include\combina.h
+	<Utilaje.h>
+
+1581715925 source:c:\users\vlad\desktop\fermanew\src\tractor.cpp
+	"Tractor.h"
+
+1581715925 c:\users\vlad\desktop\fermanew\include\tractor.h
+	<Utilaje.h>
+
+1581720187 source:c:\users\vlad\desktop\fermanew\src\utilaj.cpp
+	"Utilaj.h"
+
+1581720187 c:\users\vlad\desktop\fermanew\include\utilaj.h
+
+1581879652 c:\users\vlad\desktop\fermanew\include\meniu.h
+	"Ferma.h"
+	<iostream>
+
+1581879652 source:c:\users\vlad\desktop\fermanew\src\meniu.cpp
+	"Meniu.h"
 
