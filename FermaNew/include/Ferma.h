@@ -5,6 +5,8 @@
 #include <string>
 #include "Patruped.h"
 #include "Pasare.h"
+#include "Utilaj.h"
+
 
 class Ferma
 {
@@ -13,8 +15,10 @@ class Ferma
         virtual ~Ferma();
         std::vector<Animal> GetAnimalute (){return Animalute;}
         void AdaugaAnimal(Animal);
+        void AdaugaUtilaj(Utilaj);
         std::string NumeSpecieAnimal(int);
         void EliminaAnimale(int , int);
+        void EliminaUtilaje(TipUtilaj , int);
         void ListaCateg();
         void SetFan(int fan){cantitateFan += fan;}
         void SetPorumb (int porumb) {cantitatePorumb += porumb;}
@@ -28,15 +32,12 @@ class Ferma
         void CumparaAnimale();
         void CreeazaAnimaleDeCumparat(TipAnimal , int);
 
-
-
-
-
     protected:
 
     private:
         std::vector<Animal> Animalute;
         std::vector<int> Pret;
+        std::vector<Utilaj> Masinute;
         std::vector<int>pretCumparare;
         int cantitateFan;
         int cantitatePorumb;
