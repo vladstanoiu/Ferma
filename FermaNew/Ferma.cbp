@@ -36,12 +36,14 @@
 		</Compiler>
 		<Unit filename="include/Animal.h" />
 		<Unit filename="include/Ferma.h" />
+		<Unit filename="include/Meniu.h" />
 		<Unit filename="include/Pasare.h" />
 		<Unit filename="include/Patruped.h" />
 		<Unit filename="include/Utilaj.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Animal.cpp" />
 		<Unit filename="src/Ferma.cpp" />
+		<Unit filename="src/Meniu.cpp" />
 		<Unit filename="src/Pasare.cpp" />
 		<Unit filename="src/Patruped.cpp" />
 		<Unit filename="src/Utilaj.cpp" />
