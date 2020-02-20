@@ -100,3 +100,49 @@
 1581879652 source:c:\users\vlad\desktop\fermanew\src\meniu.cpp
 	"Meniu.h"
 
+1581878403 source:c:\users\vlad\desktop\fermanew\fermanew\main.cpp
+	<iostream>
+	"Meniu.h"
+
+1581879652 c:\users\vlad\desktop\fermanew\fermanew\include\meniu.h
+	"Ferma.h"
+	<iostream>
+
+1581794447 c:\users\vlad\desktop\fermanew\fermanew\include\ferma.h
+	<vector>
+	"Animal.h"
+	<string>
+	"Patruped.h"
+	"Pasare.h"
+	"Utilaj.h"
+
+1581795427 c:\users\vlad\desktop\fermanew\fermanew\include\animal.h
+	<string>
+
+1581708174 c:\users\vlad\desktop\fermanew\fermanew\include\patruped.h
+	"Animal.h"
+
+1581877603 c:\users\vlad\desktop\fermanew\fermanew\include\pasare.h
+	<Animal.h>
+
+1581720187 c:\users\vlad\desktop\fermanew\fermanew\include\utilaj.h
+
+1581708174 source:c:\users\vlad\desktop\fermanew\fermanew\src\animal.cpp
+	"Animal.h"
+
+1581879125 source:c:\users\vlad\desktop\fermanew\fermanew\src\ferma.cpp
+	"Ferma.h"
+	<iostream>
+
+1581879652 source:c:\users\vlad\desktop\fermanew\fermanew\src\meniu.cpp
+	"Meniu.h"
+
+1581708174 source:c:\users\vlad\desktop\fermanew\fermanew\src\pasare.cpp
+	"Pasare.h"
+
+1581708187 source:c:\users\vlad\desktop\fermanew\fermanew\src\patruped.cpp
+	"Patruped.h"
+
+1581720187 source:c:\users\vlad\desktop\fermanew\fermanew\src\utilaj.cpp
+	"Utilaj.h"
+
