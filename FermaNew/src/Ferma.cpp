@@ -4,6 +4,8 @@ using namespace std;
 
 Ferma::Ferma()
 {
+    cantitateFan = 0;
+    cantitatePorumb = 0;
     Pret = vector<int>(8);
     Pret[0] = 100;
     Pret[1] = 70;
@@ -66,16 +68,33 @@ string Ferma::NumeSpecieAnimal(int animal)
 }
 void Ferma::CreeazaAnimaleDeCumparat(TipAnimal tip, int numarAnimale)
 {
+    cout << "Precizati necesarul de hrana: " <<  endl;
+    cout << "1. Porumb" << "\n2. Fan" << endl;
+    TipMancare tipMancare;
+    int optiuneMancare;
+    cin >> optiuneMancare;
+        if (optiuneMancare == 1 )
+        {
+            tipMancare = porumb;
+        }
+        if (optiuneMancare == 2)
+        {
+            tipMancare = fan;
+        }
+    cout << "Precizati cantitatea in kg/zi: " << endl;
+    int cantitate;
+    cin>>cantitate;
+
     for (int q = 0; q < numarAnimale; q++)
     {
         if (tip == porc || tip == bovina || tip == oaie || tip == cal)
         {
-            Patruped animalNou = Patruped(tip);
+            Patruped animalNou = Patruped(tip , tipMancare , cantitate);
             AdaugaAnimal(animalNou);
         }
         else
         {
-            Pasare animalNou = Pasare(tip);
+            Pasare animalNou = Pasare(tip , tipMancare , cantitate);
             AdaugaAnimal(animalNou);
         }
     }
