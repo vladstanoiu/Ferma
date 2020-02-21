@@ -284,6 +284,7 @@ void Meniu::CereCantitateDeAdaugat(TipMancare mancare)
     cout << "Precizati cantitatea: "<< endl;
     int i;
     cin >> i;
+    int bugetDisponibil = ferma.GetBuget();
     if (i > ferma.GetBuget() && (i > 0))
     {
         cout << "Nu aveti buget disponibil in ferma pentru mancare!" << endl;
