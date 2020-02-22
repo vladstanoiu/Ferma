@@ -73,14 +73,15 @@ void Ferma::CreeazaAnimaleDeCumparat(TipAnimal tip, int numarAnimale)
     TipMancare tipMancare;
     int optiuneMancare;
     cin >> optiuneMancare;
-        if (optiuneMancare == 1 )
-        {
-            tipMancare = porumb;
-        }
-        if (optiuneMancare == 2)
-        {
-            tipMancare = fan;
-        }
+    if (optiuneMancare == 1 )
+    {
+        tipMancare = porumb;
+    }
+    if (optiuneMancare == 2)
+    {
+        tipMancare = fan;
+    }
+    system("CLS");
     cout << "Precizati cantitatea in kg/zi: " << endl;
     int cantitate;
     cin>>cantitate;
@@ -89,16 +90,16 @@ void Ferma::CreeazaAnimaleDeCumparat(TipAnimal tip, int numarAnimale)
     {
         if (tip == porc || tip == bovina || tip == oaie || tip == cal)
         {
-            Patruped animalNou = Patruped(tip , tipMancare , cantitate);
+            Patruped animalNou = Patruped(tip, tipMancare, cantitate);
             AdaugaAnimal(animalNou);
         }
         else
         {
-            Pasare animalNou = Pasare(tip , tipMancare , cantitate);
+            Pasare animalNou = Pasare(tip, tipMancare, cantitate);
             AdaugaAnimal(animalNou);
         }
     }
-
+    system("CLS");
 }
 
 void Ferma::AdaugaAnimal(Animal animal)
@@ -196,11 +197,13 @@ void Ferma::VanzareAnimaleFerma()
         short numar;
         unsigned int bugetPorc =0, bugetOi = 0, bugetBovine = 0, bugetCai =0, bugetGaini =0, bugetGaste =0, bugetRate=0, bugetCurci=0;
         cin >> optiune;
+        system("CLS");
         switch (optiune)
         {
         case 0 :
             cout << "Ati selectat optiunea - Porci (100 euro / bucata)"  << "\nCati porci doriti sa vindeti?" <<endl;
             cin >> numar;
+            system("CLS");
             if ((numar > 0) && (nrCategorii[0] >= numar))
             {
                 EliminaAnimale(0, numar);
@@ -213,6 +216,7 @@ void Ferma::VanzareAnimaleFerma()
             }
             else
             {
+                system("CLS");
                 cout << "Optiune invalida!!!" << endl;
                 system("pause");
                 VanzareAnimaleFerma();
@@ -221,6 +225,7 @@ void Ferma::VanzareAnimaleFerma()
         case 1 :
             cout << "Ati selectat optiunea - Oi (70 euro / bucata)"  << "\nCate oi doriti sa vindeti?" <<endl;
             cin >> numar;
+            system("CLS");
             if ((numar > 0) && (nrCategorii[1] >= numar))
             {
                 EliminaAnimale(1, numar);
@@ -233,6 +238,7 @@ void Ferma::VanzareAnimaleFerma()
             }
             else
             {
+                system("CLS");
                 cout << "Optiune invalida!!!" << endl;
                 system("pause");
                 VanzareAnimaleFerma();
@@ -241,6 +247,7 @@ void Ferma::VanzareAnimaleFerma()
         case 2 :
             cout << "Ati selectat optiunea - Bovine (200 euro / bucata)"  << "\nCate bovine doriti sa vindeti?" <<endl;
             cin >> numar;
+            system("CLS");
             if ((numar > 0) && (nrCategorii[2] >= numar))
             {
                 EliminaAnimale(0, numar);
@@ -253,6 +260,7 @@ void Ferma::VanzareAnimaleFerma()
             }
             else
             {
+                system("CLS");
                 cout << "Optiune invalida!!!" << endl;
                 system("pause");
                 VanzareAnimaleFerma();
@@ -261,6 +269,7 @@ void Ferma::VanzareAnimaleFerma()
         case 3 :
             cout << "Ati selectat optiunea - Cai (300 euro / bucata)"  << "\nCati cai doriti sa vindeti?" <<endl;
             cin >> numar;
+            system("CLS");
             if ((numar > 0) && (nrCategorii[3] >= numar))
             {
                 EliminaAnimale(3, numar);
@@ -273,6 +282,7 @@ void Ferma::VanzareAnimaleFerma()
             }
             else
             {
+                system("CLS");
                 cout << "Optiune invalida!!!" << endl;
                 system("pause");
                 VanzareAnimaleFerma();
@@ -281,6 +291,7 @@ void Ferma::VanzareAnimaleFerma()
         case 4 :
             cout << "Ati selectat optiunea - Gaini (25 euro / bucata)"  << "\nCate gaini doriti sa vindeti?" <<endl;
             cin >> numar;
+            system("CLS");
             if ((numar > 0) && (nrCategorii[4] >= numar))
             {
                 EliminaAnimale(4, numar);
@@ -293,6 +304,7 @@ void Ferma::VanzareAnimaleFerma()
             }
             else
             {
+                system("CLS");
                 cout << "Optiune invalida!!!" << endl;
                 system("pause");
                 VanzareAnimaleFerma();
@@ -301,6 +313,7 @@ void Ferma::VanzareAnimaleFerma()
         case 5 :
             cout << "Ati selectat optiunea - Gaste (25 euro / bucata)"  << "\nCate gaste doriti sa vindeti?" <<endl;
             cin >> numar;
+            system("CLS");
             if ((numar > 0) && (nrCategorii[5] >= numar))
             {
                 EliminaAnimale(5, numar);
@@ -313,6 +326,7 @@ void Ferma::VanzareAnimaleFerma()
             }
             else
             {
+                system("CLS");
                 cout << "Optiune invalida!!!" << endl;
                 system("pause");
                 VanzareAnimaleFerma();
@@ -321,6 +335,7 @@ void Ferma::VanzareAnimaleFerma()
         case 6 :
             cout << "Ati selectat optiunea - Rate (30 euro / bucata)"  << "\nCate rate doriti sa vindeti?" <<endl;
             cin >> numar;
+            system("CLS");
             if ((numar > 0) && (nrCategorii[6] >= numar))
             {
                 EliminaAnimale(6, numar);
@@ -333,6 +348,7 @@ void Ferma::VanzareAnimaleFerma()
             }
             else
             {
+                system("CLS");
                 cout << "Optiune invalida!!!" << endl;
                 system("pause");
                 VanzareAnimaleFerma();
@@ -341,6 +357,7 @@ void Ferma::VanzareAnimaleFerma()
         case 7 :
             cout << "Ati selectat optiunea - Curci (30 euro / bucata)"  << "\nCate curci doriti sa vindeti?" <<endl;
             cin >> numar;
+            system("CLS");
             if ((numar > 0) && (nrCategorii[7] >= numar))
             {
                 EliminaAnimale(7, numar);
@@ -353,6 +370,7 @@ void Ferma::VanzareAnimaleFerma()
             }
             else
             {
+                system("CLS");
                 cout << "Optiune invalida!!!" << endl;
                 system("pause");
                 VanzareAnimaleFerma();
@@ -362,6 +380,7 @@ void Ferma::VanzareAnimaleFerma()
             system ("CLS");
             cout << "Preturile animalelor sunt: " << "\n\nPorci - 100 euro / bucata \nOi - 70 euro / bucata \nBovine - 200 euro / bucata \nCai - 300 euro / bucata \nGaini - 25 euro / bucata \nGaste - 25 euro / bucata \nRate - 30 euro / bucata \nCurci - 30 euro / bucata "<<endl<<endl;
             system("pause");
+            VanzareAnimaleFerma();
             break;
         case 9 :
 
@@ -406,6 +425,7 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
+            system("CLS");
             CreeazaAnimaleDeCumparat(porc, numar);
             sold -= pretCumparare[0] * numar;
             cout << "Ati cumparat " << numar << " porci" << endl;
@@ -427,6 +447,7 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
+            system("CLS");
             CreeazaAnimaleDeCumparat(oaie, numar);
             sold -= pretCumparare[1] * numar;
             cout << "Ati cumparat " << numar << " oi" << endl;
@@ -448,6 +469,7 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
+            system("CLS");
             CreeazaAnimaleDeCumparat(bovina, numar);
             sold -= pretCumparare[2] * numar;
             cout << "Ati cumparat " << numar << " bovine" << endl;
@@ -469,6 +491,7 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
+            system("CLS");
             CreeazaAnimaleDeCumparat(cal, numar);
             sold -= pretCumparare[3] * numar;
             cout << "Ati cumparat " << numar << " cai" << endl;
@@ -490,6 +513,7 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
+            system("CLS");
             CreeazaAnimaleDeCumparat(gaina, numar);
             sold -= pretCumparare[4] * numar;
             cout << "Ati cumparat " << numar << " gaini" << endl;
@@ -511,6 +535,7 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
+            system("CLS");
             CreeazaAnimaleDeCumparat(gasca, numar);
             sold -= pretCumparare[5] * numar;
             cout << "Ati cumparat " << numar << " porci" << endl;
@@ -532,6 +557,7 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
+            system("CLS");
             CreeazaAnimaleDeCumparat(rata, numar);
             sold -= pretCumparare[6] * numar;
             cout << "Ati cumparat " << numar << " porci" << endl;
@@ -553,6 +579,7 @@ void Ferma::CumparaAnimale()
         cin >> numar;
         if (numar > 0)
         {
+            system("CLS");
             CreeazaAnimaleDeCumparat(curca, numar);
             sold -= pretCumparare[7] * numar;
             cout << "Ati cumparat " << numar << " porci" << endl;
@@ -569,7 +596,7 @@ void Ferma::CumparaAnimale()
         }
         break;
     case 8 :
-
+        system("CLS");
         cout << "Soldul disponibil este " << sold << " euro" <<endl;
         system("pause");
         CumparaAnimale();
