@@ -107,10 +107,6 @@ void Ferma::AdaugaAnimal(Animal animal)
     Animalute.push_back(animal);
 }
 
-void Ferma::AdaugaUtilaj(Utilaj utilaj)
-{
-    Masinute.push_back(utilaj);
-}
 
 void Ferma::EliminaAnimale(int tipAnimal, int nr)
 {
@@ -119,7 +115,7 @@ void Ferma::EliminaAnimale(int tipAnimal, int nr)
     {
         if (Animalute[i].GetSpecie() == tipAnimal)
         {
-            if (nr > 0)
+            if (nr > 0 )
             {
                 nr--;
             }
@@ -130,35 +126,12 @@ void Ferma::EliminaAnimale(int tipAnimal, int nr)
         }
         else
         {
-            vectoras.push_back(Animalute[i]);
+          vectoras.push_back(Animalute[i]);
         }
     }
     Animalute = vectoras;
 }
 
-void Ferma::EliminaUtilaje(TipUtilaj TipUtilaj, int nr)
-{
-    vector <Utilaj> vectorel;
-    for (int i = 0 ; i < Masinute.size(); i++)
-    {
-        if (Masinute[i].GetUtilaj() == TipUtilaj)
-        {
-            if (nr > 0)
-            {
-                nr--;
-            }
-            else
-            {
-                vectorel.push_back(Masinute[i]);
-            }
-        }
-        else
-        {
-            vectorel.push_back(Masinute[i]);
-        }
-    }
-    Masinute = vectorel;
-}
 
 void Ferma::ListaCateg()
 {
