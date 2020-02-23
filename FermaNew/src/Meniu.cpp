@@ -325,6 +325,7 @@ void Meniu::ExchangeOffice()
     short numar;
     int optiune;
     cin >> optiune;
+    cout << endl;
     switch (optiune)
     {
     case 1:
@@ -333,6 +334,7 @@ void Meniu::ExchangeOffice()
         cin >> numar;
         cout << endl;
         cout << numar << " ron sunt " <<  numar * 0.21  << " euro." << endl;
+        system("PAUSE");
         break;
     case 2:
         cout << "Ati ales moneda - Lira Sterlina (GBP) " << endl;
