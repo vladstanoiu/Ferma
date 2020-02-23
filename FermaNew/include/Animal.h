@@ -11,10 +11,13 @@ class Animal
         Animal();
         Animal(TipAnimal , TipMancare , int);
         Animal(TipAnimal);
-        virtual ~Animal();
+
         TipAnimal GetSpecie() {return specie;}
         TipMancare GetTipMancare(){return haleala;}
         int GetCantitateMancare(){return cantitateMancare;}
+
+        virtual ~Animal();
+
     protected:
 
     private:
