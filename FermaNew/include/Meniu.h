@@ -1,6 +1,6 @@
 #ifndef MENIU_H
 #define MENIU_H
-//#include "Animal.h"
+
 #include "Ferma.h"
 #include <iostream>
 
@@ -10,6 +10,7 @@ class Meniu
 public:
     Meniu(Ferma);
     Meniu();
+
     void MeniuPrincipal();
     void CreeazaAnimale(TipAnimal, int, TipMancare, int );
     void AfiseazaPatrupede();
@@ -25,7 +26,7 @@ public:
     void CereCantitateDeAdaugat(TipMancare);
     void AfiseazaSituatieFerma();
     void ExchangeOffice();
-    bool GetAlearga (){return alearga;}
+    bool GetAlearga(){return alearga;}
 
     virtual ~Meniu();
 
