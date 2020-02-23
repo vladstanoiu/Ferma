@@ -23,10 +23,9 @@ void Meniu::MeniuPrincipal()
     cout << "5. Afiseaza situatie ferma" << endl;
     cout << "6. Vanzare animale" << endl;
     cout << "7. Cumpara animale" << endl;
-    cout << "8. Masini si utilaje agricole" << endl;
-    cout << "9. Vizualizeaza buget ferma" << endl;
-    cout << "10. Exchange office" << endl;
-    cout << "11. Iesire" << endl;
+    cout << "8. Vizualizeaza buget ferma" << endl;
+    cout << "9. Exchange office" << endl;
+    cout << "10. Iesire" << endl;
     int numar;
     cin >> numar;
     switch (numar)
@@ -35,7 +34,7 @@ void Meniu::MeniuPrincipal()
         AdaugareAnimal();
         break;
     case 2:
-        ReduAnimale();
+        ReduAnimale(); //mai trebuie doar sa modific in caz ca nu sunt animale in ferma si vreau sa le reduc ,sa afiseze optiune invalida , si sa salvez in fisiere cu streamurile
         break;
     case 3:
         AfiseazaPopulatieFerma();
@@ -53,20 +52,19 @@ void Meniu::MeniuPrincipal()
         ferma.CumparaAnimale();
         break;
     case 8 :
-        break;
-    case 9:
         ferma.VizualizeazaBugetFerma();
         break;
-    case 10 :
+    case 9:
         ExchangeOffice();
-    case 11:
+        break;
+    case 10 :
         alearga = false;
         break;
     default:
         MeniuPrincipal();
+        break;
     }
 }
-
 
 void Meniu::AdaugareAnimal()
 {
@@ -228,7 +226,10 @@ void Meniu::ReduAnimale()
     {
         ReduAnimale();
     }
+    AfiseazaPopulatieFerma();
 }
+
+
 
 void Meniu::CereNrAnimaleExclus(int a)
 {
@@ -301,11 +302,7 @@ void Meniu::CereCantitateDeAdaugat(TipMancare mancare)
             ferma.SetPorumb(i);
         }
     }
-//        else
-//        {
-//            CereCantitateDeAdaugat(mancare);
-//        }
-
+    AdaugaHranaAnimale();
 }
 void Meniu::AfiseazaSituatieFerma()
 {
