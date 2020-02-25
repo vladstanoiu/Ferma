@@ -34,7 +34,7 @@ void Meniu::MeniuPrincipal()
         AdaugareAnimal();
         break;
     case 2:
-        ReduAnimale(); //mai trebuie doar sa modific in caz ca nu sunt animale in ferma si vreau sa le reduc ,sa afiseze optiune invalida , si sa salvez in fisiere cu streamurile
+        ReduAnimale();
         break;
     case 3:
         AfiseazaPopulatieFerma();
@@ -226,7 +226,6 @@ void Meniu::ReduAnimale()
     {
         ReduAnimale();
     }
-    AfiseazaPopulatieFerma();
 }
 
 
