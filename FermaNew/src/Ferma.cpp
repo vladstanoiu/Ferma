@@ -111,27 +111,47 @@ void Ferma::AdaugaAnimal(Animal animal)
 void Ferma::EliminaAnimale(int tipAnimal, int nr)
 {
     vector <Animal> vectoras;
-    for (int i = 0 ; i < Animalute.size(); i++)
+    if (nr > 0 && NumarAnimaleDeTip(tipAnimal) >= nr )
     {
-        if (Animalute[i].GetSpecie() == tipAnimal)
+        for (int i = 0 ; i < Animalute.size(); i++)
         {
-            if (nr > 0 )
+            if (Animalute[i].GetSpecie() == tipAnimal)
             {
-                nr--;
+                if (nr > 0 )
+                {
+                    nr--;
+                }
+                else
+                {
+                    vectoras.push_back(Animalute[i]);
+                }
             }
             else
             {
                 vectoras.push_back(Animalute[i]);
             }
         }
-        else
-        {
-          vectoras.push_back(Animalute[i]);
-        }
+        Animalute = vectoras;
     }
-    Animalute = vectoras;
+    else
+    {
+        cout << "Nu sunt suficiente animale de tipul ales in ferma." << endl;
+        system("pause");
+    }
 }
 
+int Ferma::NumarAnimaleDeTip(int tip)
+{
+    int nr = 0;
+    for (int q = 0; q < Animalute.size(); q++)
+    {
+        if (Animalute[q].GetSpecie() == tip)
+        {
+            nr++;
+        }
+    }
+    return nr;
+}
 
 void Ferma::ListaCateg()
 {
