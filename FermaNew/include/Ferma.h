@@ -24,6 +24,7 @@ class Ferma
         int GetFan (){return cantitateFan;}
         int GetPorumb(){return cantitatePorumb;}
         int GetBuget(){return sold;}
+        int NumarAnimaleDeTip(int);
         void SituatieFerma();
         void VanzareAnimaleFerma();
         void VizualizeazaBugetFerma();
@@ -35,13 +36,14 @@ class Ferma
     protected:
 
     private:
-        std::vector<Animal> Animalute;
+        std::vector<Animal> Animalute; //de salvat
         std::vector<int> Pret;
         std::vector<int>pretCumparare;
-        int cantitateFan;
-        int cantitatePorumb;
+        int cantitateFan; //de salvat
+        int cantitatePorumb; //de salvat
         int buget;
-        int sold;
+        int sold; //de salvat
+        //in animal o functie de export ->
 };
 
 #endif // FERMA_H
