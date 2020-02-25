@@ -108,7 +108,7 @@
 	"Ferma.h"
 	<iostream>
 
-1582428676 c:\users\vlad\desktop\fermanew\fermanew\include\ferma.h
+1582579667 c:\users\vlad\desktop\fermanew\fermanew\include\ferma.h
 	"Animal.h"
 	"Patruped.h"
 	"Pasare.h"
@@ -129,11 +129,11 @@
 1581708174 source:c:\users\vlad\desktop\fermanew\fermanew\src\animal.cpp
 	"Animal.h"
 
-1582442952 source:c:\users\vlad\desktop\fermanew\fermanew\src\ferma.cpp
+1582577292 source:c:\users\vlad\desktop\fermanew\fermanew\src\ferma.cpp
 	"Ferma.h"
 	<iostream>
 
-1582483981 source:c:\users\vlad\desktop\fermanew\fermanew\src\meniu.cpp
+1582577150 source:c:\users\vlad\desktop\fermanew\fermanew\src\meniu.cpp
 	"Meniu.h"
 
 1581708174 source:c:\users\vlad\desktop\fermanew\fermanew\src\pasare.cpp
