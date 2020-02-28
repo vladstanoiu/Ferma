@@ -41,7 +41,7 @@ void Ferma::ExportSold(std::ostream& out)
 
 void Ferma::ExportMancare(std::ostream& out)
 {
-    out << porumb << " " << fan ;
+    out << cantitatePorumb << " " << cantitateFan ;
 }
 
 string Ferma::NumeSpecieAnimal(int animal)
