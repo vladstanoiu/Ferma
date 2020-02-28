@@ -1,20 +1,22 @@
 #include <iostream>
 #include "Meniu.h"
-
+#include <fstream>
 
 using namespace std;
+
 
 int main()
 {
     Ferma fermaAnimale;
     Meniu meniu(fermaAnimale);
-      //cod care citeste din fisier
+    meniu.CitesteAnimale();
+    meniu.CitesteSold();
+    meniu.CitesteMancare();
+
     while(meniu.GetAlearga())
     {
         meniu.MeniuPrincipal();
     }
-        //cod care scrie in fisier situatia fermei
-
     return 0;
 }
 
