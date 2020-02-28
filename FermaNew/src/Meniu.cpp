@@ -111,11 +111,8 @@ void Meniu::CitesteMancare()
             int fan;
             int porumb;
             ss >> porumb >> fan ;
-            if (porumb && fan != 0 )
-            {
                 ferma.SetPorumb(porumb);
                 ferma.SetFan(fan);
-            }
         }
         inFisOb.close();
     }
@@ -134,11 +131,8 @@ void Meniu::CitesteSold()
             ss << buf;
             int sold;
             ss >> sold ;
-            if (sold != 0 )
-            {
-   //            Ferma fermuta{sold};
-                ferma.SetBuget(sold);
-            }
+            ferma.SetBuget(sold);
+
 
         }
         inFisOb.close();
