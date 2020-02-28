@@ -20,7 +20,7 @@ class Ferma
         void ListaCateg();
         void SetFan(int fan){cantitateFan += fan;}
         void SetPorumb (int porumb) {cantitatePorumb += porumb;}
-        void SetBuget(int bugetFerma) {sold += bugetFerma;}
+        void SetBuget(int bugetFerma) {sold = bugetFerma;}
         int GetFan(){return cantitateFan;}
         int GetPorumb(){return cantitatePorumb;}
         int GetBuget(){return sold;}
