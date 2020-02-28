@@ -1,6 +1,6 @@
 #ifndef MENIU_H
 #define MENIU_H
-
+#include <sstream>
 #include "Ferma.h"
 #include <iostream>
 
@@ -26,6 +26,14 @@ public:
     void CereCantitateDeAdaugat(TipMancare);
     void AfiseazaSituatieFerma();
     void ExchangeOffice();
+    void ExportaAnimale();
+    void ExportaMancare();
+    void ExportaSold();
+    void CitesteSold();
+    void CitesteAnimale();
+    void CitesteMancare();
+    TipAnimal nrToAnimal(int);
+    TipMancare nrToFood(int);
     bool GetAlearga(){return alearga;}
 
     virtual ~Meniu();
