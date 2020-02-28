@@ -1,7 +1,10 @@
 #include "Ferma.h"
 #include <iostream>
 using namespace std;
-
+//Ferma::Ferma(int money) : sold(money)
+//{
+//
+//}
 Ferma::Ferma()
 {
     cantitateFan = 0;
@@ -29,6 +32,16 @@ Ferma::Ferma()
     pretCumparare[6] = 25;
     pretCumparare[7] = 25;
 
+}
+
+void Ferma::ExportSold(std::ostream& out)
+{
+    out << sold ;
+}
+
+void Ferma::ExportMancare(std::ostream& out)
+{
+    out << porumb << " " << fan ;
 }
 
 string Ferma::NumeSpecieAnimal(int animal)
