@@ -100,23 +100,26 @@
 1581879652 source:c:\users\vlad\desktop\fermanew\src\meniu.cpp
 	"Meniu.h"
 
-1581878403 source:c:\users\vlad\desktop\fermanew\fermanew\main.cpp
+1582749645 source:c:\users\vlad\desktop\fermanew\fermanew\main.cpp
 	<iostream>
 	"Meniu.h"
+	<fstream>
 
-1582434904 c:\users\vlad\desktop\fermanew\fermanew\include\meniu.h
+1582749440 c:\users\vlad\desktop\fermanew\fermanew\include\meniu.h
+	<sstream>
 	"Ferma.h"
 	<iostream>
 
-1582579667 c:\users\vlad\desktop\fermanew\fermanew\include\ferma.h
+1582749440 c:\users\vlad\desktop\fermanew\fermanew\include\ferma.h
 	"Animal.h"
 	"Patruped.h"
 	"Pasare.h"
 	<vector>
 	<string>
 
-1582433189 c:\users\vlad\desktop\fermanew\fermanew\include\animal.h
+1582654052 c:\users\vlad\desktop\fermanew\fermanew\include\animal.h
 	<string>
+	<ostream>
 
 1581708174 c:\users\vlad\desktop\fermanew\fermanew\include\patruped.h
 	"Animal.h"
@@ -126,15 +129,16 @@
 
 1581720187 c:\users\vlad\desktop\fermanew\fermanew\include\utilaj.h
 
-1581708174 source:c:\users\vlad\desktop\fermanew\fermanew\src\animal.cpp
+1582657427 source:c:\users\vlad\desktop\fermanew\fermanew\src\animal.cpp
 	"Animal.h"
 
-1582577292 source:c:\users\vlad\desktop\fermanew\fermanew\src\ferma.cpp
+1582750548 source:c:\users\vlad\desktop\fermanew\fermanew\src\ferma.cpp
 	"Ferma.h"
 	<iostream>
 
-1582577150 source:c:\users\vlad\desktop\fermanew\fermanew\src\meniu.cpp
+1582750673 source:c:\users\vlad\desktop\fermanew\fermanew\src\meniu.cpp
 	"Meniu.h"
+	<fstream>
 
 1581708174 source:c:\users\vlad\desktop\fermanew\fermanew\src\pasare.cpp
 	"Pasare.h"
