@@ -1,5 +1,8 @@
 #include "Meniu.h"
+#include <fstream>
+
 using namespace std;
+
 Meniu::Meniu()
 {
     //ctor
@@ -59,11 +62,116 @@ void Meniu::MeniuPrincipal()
         break;
     case 10 :
         alearga = false;
+        ExportaAnimale();
+        ExportaSold();
+        ExportaMancare();
         break;
     default:
         MeniuPrincipal();
         break;
     }
+}
+
+void Meniu::CitesteAnimale()
+{
+    ifstream inFisOb ("Animale.txt");
+    if(inFisOb.is_open())
+    {
+        while (!inFisOb.eof())
+        {
+            char buf[20];
+            inFisOb.getline(buf, 20);
+            stringstream ss;
+            ss << buf;
+            int cantitateMancare;
+            int haleala;
+            int specie;
+            ss >> specie  >> haleala >> cantitateMancare;
+            if (cantitateMancare != 0 )
+            {
+                Animal animal {nrToAnimal(specie), nrToFood(haleala), cantitateMancare};
+                ferma.AdaugaAnimal(animal);
+            }
+        }
+        inFisOb.close();
+    }
+}
+
+void Meniu::CitesteMancare()
+{
+    ifstream inFisOb ("Mancare.txt");
+    if(inFisOb.is_open())
+    {
+        while (!inFisOb.eof())
+        {
+            char buf[20];
+            inFisOb.getline(buf, 20);
+            stringstream ss;
+            ss << buf;
+            int fan;
+            int porumb;
+            ss >> porumb >> fan ;
+            if (porumb && fan != 0 )
+            {
+                ferma.SetPorumb(porumb);
+                ferma.SetFan(fan);
+            }
+        }
+        inFisOb.close();
+    }
+}
+
+void Meniu::CitesteSold()
+{
+    ifstream inFisOb ("Sold.txt");
+    if(inFisOb.is_open())
+    {
+        while (!inFisOb.eof())
+        {
+            char buf[20];
+            inFisOb.getline(buf, 20);
+            stringstream ss;
+            ss << buf;
+            int sold;
+            ss >> sold ;
+            if (sold != 0 )
+            {
+   //            Ferma fermuta{sold};
+                ferma.SetBuget(sold);
+            }
+
+        }
+        inFisOb.close();
+    }
+}
+
+
+void Meniu::ExportaSold()
+{
+    ofstream exOutSold ("Sold.txt");
+    ferma.ExportSold(exOutSold);
+    exOutSold.close();
+}
+
+void Meniu::ExportaAnimale()
+{
+    ofstream exOutAnimale ("Animale.txt");
+    for (int x = 0; x < ferma.GetAnimalute().size(); x++)
+    {
+        ferma.GetAnimalute()[x].Export(exOutAnimale);
+        if (x < ferma.GetAnimalute().size() - 1)
+        {
+            exOutAnimale << endl;
+        }
+    }
+    exOutAnimale.close();
+}
+
+void Meniu::ExportaMancare()
+{
+    ofstream exOutMancare ("Mancare.txt");
+    ferma.ExportMancare(exOutMancare);
+    exOutMancare.close();
 }
 
 void Meniu::AdaugareAnimal()
@@ -228,8 +336,6 @@ void Meniu::ReduAnimale()
     }
 }
 
-
-
 void Meniu::CereNrAnimaleExclus(int a)
 {
     system("CLS");
@@ -364,4 +470,58 @@ void Meniu::ExchangeOffice()
         break;
         ;
     }
+
 }
+TipAnimal Meniu::nrToAnimal(int nr)
+{
+    TipAnimal tip;
+    switch (nr)
+    {
+    case 0 :
+        tip = porc;
+        break;
+    case 1 :
+        tip = oaie;
+        break;
+    case 2 :
+        tip = bovina;
+        break;
+    case 3 :
+        tip = cal;
+        break;
+    case 4 :
+        tip = gaina;
+        break;
+    case 5 :
+        tip = gasca;
+        break;
+    case 6 :
+        tip = rata;
+        break;
+    case 7 :
+        tip = curca;
+        break;
+    default :
+        break;
+    }
+    return tip;
+}
+
+TipMancare Meniu::nrToFood(int nr)
+{
+    TipMancare tip;
+    switch (nr)
+    {
+    case 0 :
+        tip = porumb;
+        break;
+    case 1 :
+        tip = fan;
+        break;
+    default :
+        break;
+    }
+    return tip;
+}
+
+
