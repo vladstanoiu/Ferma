@@ -12,7 +12,6 @@ class Ferma
 {
     public:
         Ferma();
-        Ferma(int);
         std::vector<Animal> GetAnimalute(){return Animalute;}
         std::string NumeSpecieAnimal(int);
         void AdaugaAnimal(Animal);
