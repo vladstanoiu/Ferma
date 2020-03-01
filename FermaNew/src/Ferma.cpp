@@ -44,9 +44,9 @@ void Ferma::ExportMancare(std::ostream& out)
 void Ferma::Reseteaza()
 {
     SetBuget(500);
-    cantitateFan =0;
-    cantitatePorumb=0;
-   vector <Animal> vietati;
+    SetFan(0);
+    SetPorumb(0);
+    vector <Animal> vietati;
     Animalute = vietati;
 }
 
