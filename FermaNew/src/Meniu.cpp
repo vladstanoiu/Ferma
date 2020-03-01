@@ -29,10 +29,34 @@ void Meniu::MeniuPrincipal()
     cout << "8. Vizualizeaza buget ferma" << endl;
     cout << "9. Exchange office" << endl;
     cout << "10. Iesire" << endl;
+    cout << endl;
+    cout << "0. Resetaza" << endl;
+    cout << endl;
+    cout << "Alegeti o optiune:" << endl <<endl;
     int numar;
     cin >> numar;
+    system("CLS");
     switch (numar)
     {
+    case 0 :
+        cout << "Sunteti sigur ca doriti sa resetati datele fermei?" << endl;
+        cout << "1. Da" << endl;
+        cout << "2. Nu" << endl;
+        short rasp;
+        cin >> rasp;
+        switch(rasp)
+        {
+            case 1 :
+            ferma.Reseteaza();
+            system("CLS");
+            cout << "Ati resetat cu succes datele fermei!" << endl;
+            system("pause");
+            break;
+            case 2 : Meniu();
+            break;
+        }
+
+        break;
     case 1:
         AdaugareAnimal();
         break;
@@ -111,8 +135,8 @@ void Meniu::CitesteMancare()
             int fan;
             int porumb;
             ss >> porumb >> fan ;
-                ferma.SetPorumb(porumb);
-                ferma.SetFan(fan);
+            ferma.SetPorumb(porumb);
+            ferma.SetFan(fan);
         }
         inFisOb.close();
     }
