@@ -35,10 +35,10 @@ void Meniu::MeniuPrincipal()
     cout << "Alegeti o optiune:" << endl <<endl;
     int numar;
     cin >> numar;
-    system("CLS");
     switch (numar)
     {
     case 0 :
+        system("CLS");
         cout << "Sunteti sigur ca doriti sa resetati datele fermei?" << endl;
         cout << "1. Da" << endl;
         cout << "2. Nu" << endl;
@@ -94,6 +94,7 @@ void Meniu::MeniuPrincipal()
         MeniuPrincipal();
         break;
     }
+
 }
 
 void Meniu::CitesteAnimale()
