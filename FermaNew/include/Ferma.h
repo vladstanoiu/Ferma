@@ -32,7 +32,7 @@ class Ferma
         void VizualizeazaBugetFerma();
         void CumparaAnimale();
         void CreeazaAnimaleDeCumparat(TipAnimal , int);
-
+        void Reseteaza();
         virtual ~Ferma();
 
     protected:
