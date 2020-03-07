@@ -1,7 +1,6 @@
 #ifndef FERMA_H
 #define FERMA_H
 
-#include "Animal.h"
 #include "Patruped.h"
 #include "Pasare.h"
 
@@ -17,8 +16,8 @@ class Ferma
         void AdaugaAnimal(Animal);
         void EliminaAnimale(int , int);
         void ListaCateg();
-        void SetFan(int fan){cantitateFan += fan;}
-        void SetPorumb (int porumb) {cantitatePorumb += porumb;}
+        void SetFan(int fan){cantitateFan = fan;}
+        void SetPorumb (int porumb) {cantitatePorumb = porumb;}
         void SetBuget(int bugetFerma) {sold = bugetFerma;}
         int GetFan(){return cantitateFan;}
         int GetPorumb(){return cantitatePorumb;}
