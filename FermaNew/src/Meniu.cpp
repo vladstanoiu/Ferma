@@ -1,4 +1,5 @@
 #include "Meniu.h"
+#include <iostream>
 #include <fstream>
 
 using namespace std;
@@ -197,8 +198,10 @@ void Meniu::AdaugareAnimal()
 {
     system("CLS");
     cout << "Doriti sa adaugati: " << endl;
+    cout << endl;
     cout << "1. Patrupede" << endl;
     cout << "2. Pasari" << endl;
+    cout << endl;
     cout << "0. Reveniti la ecranul anterior" << endl;
     int optiune;
     cin >> optiune;
@@ -278,6 +281,7 @@ void Meniu::NrAnimaleNoi(TipAnimal tip)
 {
     system("CLS");
     cout << "Introduceti numarul de animale noi: " << endl;
+    cout << endl;
     int numar;
     cin >> numar;
     if (numar > 0)
@@ -290,6 +294,7 @@ void Meniu::CereTipMancare(TipAnimal tip, int numarAnimale)
 {
     system("CLS");
     cout << "Precizati necesarul de hrana: " <<  endl;
+    cout <<endl;
     cout << "1. Porumb" << "\n2. Fan" << endl;
     int nr1;
     cin >> nr1;
@@ -310,6 +315,7 @@ void Meniu::CereCantitateMancare(TipAnimal tip, int numarAnimale, TipMancare man
 {
     system("CLS");
     cout << "Precizati cantitatea in kg/zi: " << endl;
+    cout <<endl;
     int cantitate;
     cin>>cantitate;
     if (cantitate >0)
@@ -341,18 +347,26 @@ void Meniu::CreeazaAnimale(TipAnimal tip, int numarAnimale, TipMancare mancare, 
 void Meniu::ReduAnimale()
 {
     system("CLS");
-    cout << "Doriti sa reduceti  " << endl;
+    cout << "Selectati tipul de animal pe care doriti sa il reduceti:  " << endl;
+    cout << endl;
     ferma.ListaCateg();
+    cout << endl;
+    cout << "8. Revenire la meniul principal " << endl;
     int a;
     cin >> a;
     if (a >= 0 && a < 8 )
     {
         CereNrAnimaleExclus(a);
     }
+    if (a==8)
+    {
+        MeniuPrincipal();
+    }
     else
     {
         ReduAnimale();
     }
+
 }
 
 void Meniu::CereNrAnimaleExclus(int a)
@@ -374,8 +388,10 @@ void Meniu::CereNrAnimaleExclus(int a)
 void Meniu::AfiseazaPopulatieFerma()
 {
     system("CLS");
-    cout << "Doriti sa reduceti  " << endl;
+    cout << "Populatia fermei:  " << endl;
+    cout <<endl;
     ferma.ListaCateg();
+    cout <<endl;
     system("pause");
 }
 
@@ -383,8 +399,10 @@ void Meniu::AdaugaHranaAnimale()
 {
     system("CLS");
     cout <<"Doriti sa adaugati: " << endl;
+    cout << endl;
     cout << "1. Fan" << endl;
     cout << "2. Porumb " << endl;
+    cout << endl;
     cout << "0. Reveniti la ecranul anterior" << endl;
     int val;
     cin >> val;
@@ -410,7 +428,7 @@ void Meniu::CereCantitateDeAdaugat(TipMancare mancare)
     int i;
     cin >> i;
     int bugetDisponibil = ferma.GetBuget();
-    if (i > ferma.GetBuget() && (i > 0))
+    if ((i  > bugetDisponibil) && (i > 0))
     {
         cout << "Nu aveti buget disponibil in ferma pentru mancare!" << endl;
         system("pause");
@@ -425,6 +443,8 @@ void Meniu::CereCantitateDeAdaugat(TipMancare mancare)
         {
             ferma.SetPorumb(i);
         }
+        int bugetNou = bugetDisponibil - i * 10;
+        ferma.SetBuget(bugetNou);
     }
     AdaugaHranaAnimale();
 }
@@ -445,6 +465,7 @@ void Meniu::ExchangeOffice()
     cout << "2. Lira Sterlina" << endl;
     cout << "3. Dolarul American" << endl;
     cout << "4. Francul Elvetian" << endl;
+    cout << endl;
     cout << "5. Revenire la meniul principal" << endl;
     short numar;
     int optiune;
