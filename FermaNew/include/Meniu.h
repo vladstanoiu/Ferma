@@ -2,7 +2,7 @@
 #define MENIU_H
 #include <sstream>
 #include "Ferma.h"
-#include <iostream>
+
 
 
 class Meniu
