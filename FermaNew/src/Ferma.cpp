@@ -154,6 +154,7 @@ void Ferma::EliminaAnimale(int tipAnimal, int nr)
     }
     else
     {
+        system("CLS");
         cout << "Nu sunt suficiente animale de tipul ales in ferma." << endl;
         system("pause");
     }
@@ -191,6 +192,7 @@ void Ferma::VanzareAnimaleFerma()
 {
     system("CLS");
     cout << "Selectati animalele pe care doriti sa le vindeti:" << endl;
+    cout << endl;
     {
         int nrCategorii[8] {0};
         for (int q = 0; q < Animalute.size(); q++)
@@ -202,6 +204,7 @@ void Ferma::VanzareAnimaleFerma()
         {
             cout << NumeSpecieAnimal(i) << " -> " << nrCategorii[i] << endl;
         }
+        cout << endl;
         cout << "8. Preturi animale" << endl;
         cout << "9. Sumar vanzari" << endl;
         cout << "10. Revenire la meniul principal" << endl;
@@ -210,6 +213,7 @@ void Ferma::VanzareAnimaleFerma()
         unsigned int bugetPorc =0, bugetOi = 0, bugetBovine = 0, bugetCai =0, bugetGaini =0, bugetGaste =0, bugetRate=0, bugetCurci=0;
         cin >> optiune;
         system("CLS");
+        int sumar = 0;
         switch (optiune)
         {
         case 0 :
@@ -219,8 +223,9 @@ void Ferma::VanzareAnimaleFerma()
             if ((numar > 0) && (nrCategorii[0] >= numar))
             {
                 EliminaAnimale(0, numar);
-                bugetPorc+=Pret[0] * numar;
+                bugetPorc=Pret[0] * numar;
                 buget +=bugetPorc;
+                sold += bugetPorc;
                 cout << "Ati vandut " << numar << " porci" << endl;
                 cout << "Sumar porci: " << bugetPorc << " euro" << endl;
                 system ("pause");
@@ -243,6 +248,7 @@ void Ferma::VanzareAnimaleFerma()
                 EliminaAnimale(1, numar);
                 bugetOi+=Pret[1] * numar;
                 buget += bugetOi;
+                sold += bugetOi;
                 cout << "Ati vandut " << numar << " oi" << endl;
                 cout << "Sumar oi: " << bugetOi << " euro" << endl;
                 system ("pause");
@@ -262,9 +268,10 @@ void Ferma::VanzareAnimaleFerma()
             system("CLS");
             if ((numar > 0) && (nrCategorii[2] >= numar))
             {
-                EliminaAnimale(0, numar);
+                EliminaAnimale(2, numar);
                 bugetBovine+=Pret[2] * numar;
                 buget += bugetBovine;
+                sold += bugetBovine;
                 cout << "Ati vandut " << numar << " bovine" << endl;
                 cout << "Sumar bovine: " << bugetBovine <<" euro" <<  endl;
                 system ("pause");
@@ -287,6 +294,7 @@ void Ferma::VanzareAnimaleFerma()
                 EliminaAnimale(3, numar);
                 bugetCai+=Pret[3] * numar;
                 buget += bugetCai;
+                sold += bugetCai;
                 cout << "Ati vandut " << numar << " cai" << endl;
                 cout << "Sumar cai: " << bugetCai << " euro" << endl;
                 system ("pause");
@@ -309,6 +317,7 @@ void Ferma::VanzareAnimaleFerma()
                 EliminaAnimale(4, numar);
                 bugetGaini+=Pret[4] * numar;
                 buget += bugetGaini;
+                sold += bugetGaini;
                 cout << "Ati vandut " << numar << " gaini" << endl;
                 cout << "Sumar gaini: " << bugetGaini << " euro" << endl;
                 system ("pause");
@@ -331,6 +340,7 @@ void Ferma::VanzareAnimaleFerma()
                 EliminaAnimale(5, numar);
                 bugetGaste+=Pret[5] * numar;
                 buget += bugetGaste;
+                sold += bugetGaste;
                 cout << "Ati vandut " << numar << " gaste" << endl;
                 cout << "Sumar gaste: " << bugetGaste << " euro" << endl;
                 system ("pause");
@@ -353,6 +363,7 @@ void Ferma::VanzareAnimaleFerma()
                 EliminaAnimale(6, numar);
                 bugetRate+=Pret[6] * numar;
                 buget += bugetRate;
+                sold += bugetRate;
                 cout << "Ati vandut " << numar << " rate" << endl;
                 cout << "Sumar rate: " << bugetRate << " euro" << endl;
                 system ("pause");
@@ -375,6 +386,7 @@ void Ferma::VanzareAnimaleFerma()
                 EliminaAnimale(7, numar);
                 bugetCurci+=Pret[7] * numar;
                 buget +=bugetCurci;
+                sold += bugetCurci;
                 cout << "Ati vandut " << numar << " curci" << endl;
                 cout << "Sumar curci: " << bugetCurci << " euro" << endl;
                 system ("pause");
@@ -395,9 +407,9 @@ void Ferma::VanzareAnimaleFerma()
             VanzareAnimaleFerma();
             break;
         case 9 :
-
             cout << "Sumarul total este: " << buget <<endl;
             system("pause");
+            //buget = 0;
             VanzareAnimaleFerma();
             break;
         case 10 :
@@ -415,7 +427,8 @@ void Ferma::CumparaAnimale()
     {
         nrCategorii[Animalute[q].GetSpecie()] += 1;
     }
-
+    cout << "Alegeti ce animal doriti sa cumparati:" << endl;
+    cout << endl;
     cout << NumeSpecieAnimal(0) << " -> " << "80 euro / bucata" << endl;
     cout << NumeSpecieAnimal(1) << " -> " << "50 euro / bucata" << endl;
     cout << NumeSpecieAnimal(2) << " -> " << "150 euro / bucata" << endl;
@@ -424,6 +437,7 @@ void Ferma::CumparaAnimale()
     cout << NumeSpecieAnimal(5) << " -> " << "20 euro / bucata" << endl;
     cout << NumeSpecieAnimal(6) << " -> " << "25 euro / bucata" << endl;
     cout << NumeSpecieAnimal(7) << " -> " << "25 euro / bucata" << endl;
+    cout << endl;
     cout << "8. Sold disponibil" << endl;
     cout << "9. Revenire la meniul principal" << endl;
     short optiune;
@@ -623,12 +637,13 @@ void Ferma::CumparaAnimale()
 void Ferma::VizualizeazaBugetFerma()
 {
     system("CLS");
-    sold +=buget;
     cout << "Bugetul fermei este "<< GetBuget() <<" euro." << endl;
     system("pause");
 }
 void Ferma::SituatieFerma()
 {
+    cout << "Situatia fermei:" << endl;
+    cout <<endl;
     int nrCategorii[8] {0};
     int necesarFan = 0;
     int necesarPorumb = 0;
@@ -649,6 +664,7 @@ void Ferma::SituatieFerma()
     {
         cout << NumeSpecieAnimal(i) << " -> " << nrCategorii[i] << endl;
     }
+    cout << endl;
     if (necesarFan > 0)
     {
         cout << "Fan suficient pentru " << cantitateFan / necesarFan << " zile " << endl;
@@ -665,6 +681,7 @@ void Ferma::SituatieFerma()
     {
         cout << "Nu este nevoie de porumb." << endl;
     }
+    cout << endl;
 
 
 }
