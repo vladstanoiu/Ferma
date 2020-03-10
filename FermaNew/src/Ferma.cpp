@@ -6,29 +6,10 @@ Ferma::Ferma()
 {
     cantitateFan = 0;
     cantitatePorumb = 0;
-    Pret = vector<int>(8);
-    Pret[0] = 100;
-    Pret[1] = 70;
-    Pret[2] = 200;
-    Pret[3] = 300;
-    Pret[4] = 25;
-    Pret[5] = 25;
-    Pret[6] = 30;
-    Pret[7] = 30;
-
+    Pret = vector <int>{100,70,200,300,25,25,30,30};
+    pretCumparare = vector<int>{80,50,150,250,20,20,25,25};
     buget = 0;
     sold = 500;
-
-    pretCumparare = vector<int>(8);
-    pretCumparare[0] = 80;
-    pretCumparare[1] = 50;
-    pretCumparare[2] = 150;
-    pretCumparare[3] = 250;
-    pretCumparare[4] = 20;
-    pretCumparare[5] = 20;
-    pretCumparare[6] = 25;
-    pretCumparare[7] = 25;
-
 }
 
 void Ferma::ExportSold(std::ostream& out)
@@ -409,12 +390,12 @@ void Ferma::VanzareAnimaleFerma()
         case 9 :
             cout << "Sumarul total este: " << buget <<endl;
             system("pause");
-            //buget = 0;
             VanzareAnimaleFerma();
             break;
         case 10 :
             break;
         default :
+            VanzareAnimaleFerma();
             break;
         }
     }
@@ -630,7 +611,8 @@ void Ferma::CumparaAnimale()
     case 9 :
         break;
     default :
-        ;
+        CumparaAnimale();
+
     }
 
 }
