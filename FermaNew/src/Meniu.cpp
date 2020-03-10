@@ -1,6 +1,7 @@
 #include "Meniu.h"
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -471,6 +472,7 @@ void Meniu::ExchangeOffice()
     int optiune;
     cin >> optiune;
     cout << endl;
+    cout << fixed << setprecision(2);
     switch (optiune)
     {
     case 1:
