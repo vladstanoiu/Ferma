@@ -474,33 +474,44 @@ void Meniu::ExchangeOffice()
     switch (optiune)
     {
     case 1:
+        system("CLS");
         cout << "Ati ales moneda - Ron" << endl;
         cout << "Introduceti valoarea pe care doriti sa o schimbati in euro: " << endl;
         cin >> numar;
         cout << endl;
         cout << numar << " ron sunt " <<  numar * 0.21  << " euro." << endl;
         system("PAUSE");
+        ExchangeOffice();
         break;
     case 2:
+        system("CLS");
         cout << "Ati ales moneda - Lira Sterlina (GBP) " << endl;
         cout << "Introduceti valoarea pe care doriti sa o schimbati in euro: " << endl;
         cin >> numar;
         cout << endl;
         cout << numar << " lire sunt " <<  numar * 1.19  << " euro." << endl;
+        system("pause");
+        ExchangeOffice();
         break;
     case 3:
+        system("CLS");
         cout << "Ati ales moneda - Dolarul American (USD)" << endl;
         cout << "Introduceti valoarea pe care doriti sa o schimbati in euro: " << endl;
         cin >> numar;
         cout << endl;
         cout << numar << " dolari sunt " <<  numar * 0.91  << " euro." << endl;
+        system("pause");
+        ExchangeOffice();
         break;
     case 4 :
+        system("CLS");
         cout << "Ati ales moneda - Francul Elvetian (USD)" << endl;
         cout << "Introduceti valoarea pe care doriti sa o schimbati in euro: " << endl;
         cin >> numar;
         cout << endl;
         cout << numar << " franci sunt " <<  numar * 0.94  << " euro." << endl;
+        system("pause");
+        ExchangeOffice();
         break;
     case 5 :
         MeniuPrincipal();
