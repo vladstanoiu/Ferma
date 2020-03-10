@@ -564,7 +564,7 @@ void Ferma::CumparaAnimale()
             system("CLS");
             CreeazaAnimaleDeCumparat(gasca, numar);
             sold -= pretCumparare[5] * numar;
-            cout << "Ati cumparat " << numar << " porci" << endl;
+            cout << "Ati cumparat " << numar << " gaste" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
             cout << endl;
             system("pause");
@@ -586,7 +586,7 @@ void Ferma::CumparaAnimale()
             system("CLS");
             CreeazaAnimaleDeCumparat(rata, numar);
             sold -= pretCumparare[6] * numar;
-            cout << "Ati cumparat " << numar << " porci" << endl;
+            cout << "Ati cumparat " << numar << " rate" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
             cout << endl;
             system("pause");
@@ -608,7 +608,7 @@ void Ferma::CumparaAnimale()
             system("CLS");
             CreeazaAnimaleDeCumparat(curca, numar);
             sold -= pretCumparare[7] * numar;
-            cout << "Ati cumparat " << numar << " porci" << endl;
+            cout << "Ati cumparat " << numar << " curci" << endl;
             cout << "Sold disponibil: " << sold << " euro" << endl;
             cout << endl;
             system("pause");
