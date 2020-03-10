@@ -520,8 +520,6 @@ void Meniu::ExchangeOffice()
         break;
     default :
         ExchangeOffice();
-        break;
-        ;
     }
 
 }
@@ -554,8 +552,6 @@ TipAnimal Meniu::nrToAnimal(int nr)
     case 7 :
         tip = curca;
         break;
-    default :
-        break;
     }
     return tip;
 }
@@ -570,8 +566,6 @@ TipMancare Meniu::nrToFood(int nr)
         break;
     case 1 :
         tip = fan;
-        break;
-    default :
         break;
     }
     return tip;
