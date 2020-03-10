@@ -177,14 +177,15 @@
 1582657427 source:c:\users\vlads\onedrive\desktop\fermanew\fermanew\src\animal.cpp
 	"Animal.h"
 
-1583591775 source:c:\users\vlads\onedrive\desktop\fermanew\fermanew\src\ferma.cpp
+1583868884 source:c:\users\vlads\onedrive\desktop\fermanew\fermanew\src\ferma.cpp
 	"Ferma.h"
 	<iostream>
 
-1583861389 source:c:\users\vlads\onedrive\desktop\fermanew\fermanew\src\meniu.cpp
+1583868883 source:c:\users\vlads\onedrive\desktop\fermanew\fermanew\src\meniu.cpp
 	"Meniu.h"
 	<iostream>
 	<fstream>
+	<iomanip>
 
 1581708174 source:c:\users\vlads\onedrive\desktop\fermanew\fermanew\src\pasare.cpp
 	"Pasare.h"
